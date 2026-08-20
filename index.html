@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akira - Discover the Fragrance of Originality</title>
+    <meta name="description" content="Discover premium, long-lasting fragrances at Akira Perfumes. Find your unique signature scent with our Scent Quiz, design custom blends in our Scent Lab, and shop curated collections.">
+    <meta name="keywords" content="perfume, fragrance, online perfume store, luxury scent, organic perfume, cologne, fragrance quiz, custom perfume, scent lab">
+    
+    <!-- OpenGraph SEO Tags -->
+    <meta property="og:title" content="Akira - Discover the Fragrance of Originality">
+    <meta property="og:description" content="Discover premium, long-lasting fragrances at Akira Perfumes. Find your unique signature scent with our Scent Quiz, design custom blends in our Scent Lab, and shop curated collections.">
+    <meta property="og:image" content="logos/akira_logo.png">
+    <meta property="og:url" content="http://localhost:3000">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akira - Discover the Fragrance of Originality">
+    <meta name="twitter:description" content="Discover premium, long-lasting fragrances at Akira Perfumes. Find your unique signature scent with our Scent Quiz, design custom blends in our Scent Lab, and shop curated collections.">
+    <meta name="twitter:image" content="logos/akira_logo.png">
+
+    <!-- JSON-LD Structured Data Schema for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Akira Perfumes",
+      "image": "logos/akira_logo.png",
+      "@id": "http://localhost:3000/#store",
+      "url": "http://localhost:3000",
+      "telephone": "+91345678910",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Madhuram Complex, Valsad",
+        "addressLocality": "Valsad",
+        "addressRegion": "Gujarat",
+        "postalCode": "396001",
+        "addressCountry": "IN"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Design stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logos/akira_logo.png">
+    
+    <!-- Google Icons (Material Symbols) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- --- DESKTOP HEADER --- -->
+    <header>
+        <nav class="nav-bar">
+            <a href="#" id="logo">akira</a>
+            <div class="nav-bar-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#quiz">Scent Finder</a></li>
+                    <li><a href="#scent-lab">Scent Lab</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <!-- Theme Toggle -->
+                    <button class="icon-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                    <!-- Cart Button -->
+                    <button class="icon-btn" id="cart-btn" title="Open Drawer Cart" aria-label="Open Drawer Cart">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- --- RESPONSIVE HEADER --- -->
+        <nav class="nav-bar-responsive">
+            <a href="#" id="logo">Akira</a>
+            <div class="nav-controls">
+                <button class="icon-btn" id="theme-toggle-mobile" title="Toggle Theme" aria-label="Toggle Theme">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+                <button class="icon-btn" id="cart-btn-mobile" title="Open Drawer Cart" aria-label="Open Drawer Cart">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="icon-btn" id="menu-toggle" title="Open Menu" aria-label="Open Menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Slide-out Drawer -->
+    <div class="mobile-menu-drawer" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="#" id="logo">Akira</a>
+            <button class="icon-btn" id="close-menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#quiz">Scent Finder</a></li>
+            <li><a href="#scent-lab">Scent Lab</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <main id="main">
+        <!-- --- HERO SECTION --- -->
+        <section class="container-1">
+            <div class="container-text reveal active">
+                <span class="hero-tag">Exquisite Collections</span>
+                <h1 class="large-text">Celebrate Your Individual Scent</h1>
+                <p>Perfume is all about invoking deep emotions and capturing unforgettable experiences. Discover curated scents that speak to your soul, blending elegance with absolute purity.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="style-button primary" style="text-decoration: none; display: inline-block;">Explore Products</a>
+                    <a href="#quiz" class="style-button gold" style="text-decoration: none; display: inline-block;">Scent Finder Quiz</a>
+                </div>
+            </div>
+            <div id="image-container-1" class="reveal active">
+                <div class="hero-img-wrap"></div>
+            </div>
+        </section>
+
+        <!-- --- BRAND STORY SECTION --- -->
+        <section class="container-2 reveal">
+            <div class="content-1">
+                <h1>akira</h1>
+                <div class="story-divider"></div>
+                <p>Discover the fragrance of absolute originality.</p>
+            </div>
+            <div class="content-2-image">
+                <img src="images/img1.jpg" alt="Luxury perfume bottle display">
+            </div>
+            <div class="content-3">
+                <h2 class="content-3-text">Why Shop With Akira</h2>
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <span class="material-symbols-outlined">verified_user</span>
+                        <div class="benefit-item-content">
+                            <h4>Quality You Can Trust</h4>
+                            <p>Every bottle is crafted from premium botanical extracts and aged oils under expert care.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="material-symbols-outlined">payments</span>
+                        <div class="benefit-item-content">
+                            <h4>Great Value, Fair Prices</h4>
+                            <p>Direct supply paths allow us to offer boutique quality without traditional luxury markups.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="material-symbols-outlined">eco</span>
+                        <div class="benefit-item-content">
+                            <h4>Eco-Conscious Packaging</h4>
+                            <p>Akira utilizes recyclable custom glass bottles and refills to support environmental sustainability.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="style-button primary" onclick="document.getElementById('quiz').scrollIntoView();">Find Your Scent</button>
+            </div>
+        </section>
+
+        <!-- --- SERVICES SECTION --- -->
+        <section class="container-3 reveal">
+            <div class="section-subtitle">Premium Experiences</div>
+            <h2 class="section-title">Our Signature Services</h2>
+            
+            <div class="container-3-content-2">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <img src="logos/recommendation.png" alt="Scent recommendation icon">
+                    </div>
+                    <h3>Recommendation</h3>
+                    <p>Unlock custom fragrance pairings based on your unique olfactory preferences and lifestyle vibes.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <img src="logos/perfume-spray.png" alt="Perfume refill spray icon">
+                    </div>
+                    <h3>Refills</h3>
+                    <p>Bring your empty Akira bottle back for a premium refill at a 20% discount. Sustainable and smart.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <img src="logos/giftbox.png" alt="Gift box package icon">
+                    </div>
+                    <h3>Gifting</h3>
+                    <p>Make special occasions memorable. We offer velvet-lined boxes with handwritten wax-sealed notes.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <img src="logos/refund.png" alt="Money back guarantee icon">
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>Not your signature scent? We offer hassle-free, prepaid exchanges within 30 days of purchase.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- SCENT QUIZ SECTION (NEW & INTERACTIVE) --- -->
+        <section class="quiz-section reveal" id="quiz">
+            <div class="section-subtitle">Interactive Scent Quiz</div>
+            <h2 class="section-title">Find Your Signature Match</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-progress-container">
+                    <div class="quiz-progress" id="quiz-progress-bar"></div>
+                </div>
+                <div class="quiz-header">
+                    <div class="quiz-header-title">
+                        <h3>Fragrance Matchmaker</h3>
+                    </div>
+                </div>
+                <div id="quiz-step-content">
+                    <!-- Content populated dynamically via script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- --- BESPOKE SCENT LAB SECTION (NEW) --- -->
+        <section class="scent-lab-section reveal" id="scent-lab">
+            <div class="section-subtitle">Bespoke Fragrances</div>
+            <h2 class="section-title">Akira Scent Lab</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; font-weight: 300;">Step into the laboratory. Mix your own custom fragrance, watch the bottle adapt, give it a name, and order your unique creation.</p>
+            
+            <div class="lab-container">
+                <!-- Visualizer Side -->
+                <div class="lab-visualizer">
+                    <div class="custom-bottle-wrap">
+                        <div class="custom-bottle">
+                            <div class="bottle-cap"></div>
+                            <div class="bottle-neck"></div>
+                            <div class="bottle-body">
+                                <div class="bottle-liquid" id="bottle-liquid"></div>
+                                <div class="bottle-label">
+                                    <span class="label-brand">akira</span>
+                                    <span class="label-custom-name" id="label-custom-name">Bespoke Blend</span>
+                                    <span class="label-details" id="label-details">Citrus 25% | Floral 25% | Woody 25% | Spicy 25%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottle-shadow"></div>
+                    </div>
+                </div>
+                
+                <!-- Controls Side -->
+                <div class="lab-controls">
+                    <h3>Design Your Scent</h3>
+                    <p class="controls-intro">Adjust the sliders to balance your perfect formula. Total concentration will always sum to 100%.</p>
+                    
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-name"><span class="material-symbols-outlined slider-icon" style="color: #e2c799;">lemon</span> Citrus & Fresh</span>
+                            <span class="slider-value" id="val-citrus">25%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="25" class="lab-slider" id="slide-citrus">
+                        <p class="slider-desc">Zesty bergamot, lime, and fresh sea-breeze notes.</p>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-name"><span class="material-symbols-outlined slider-icon" style="color: #e5a9a9;">local_flower_shop</span> Elegant Floral</span>
+                            <span class="slider-value" id="val-floral">25%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="25" class="lab-slider" id="slide-floral">
+                        <p class="slider-desc">Turkish rose, grandiflorum jasmine, and soft peony notes.</p>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-name"><span class="material-symbols-outlined slider-icon" style="color: #a3855e;">forest</span> Grounded Woody</span>
+                            <span class="slider-value" id="val-woody">25%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="25" class="lab-slider" id="slide-woody">
+                        <p class="slider-desc">Warm sandalwood, Virginia cedarwood, and deep vetiver notes.</p>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-name"><span class="material-symbols-outlined slider-icon" style="color: #c5a880;">local_fire_department</span> Warm & Spicy</span>
+                            <span class="slider-value" id="val-spicy">25%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="25" class="lab-slider" id="slide-spicy">
+                        <p class="slider-desc">Smoky agarwood, black pepper, cardamom, and warm amber notes.</p>
+                    </div>
+                    
+                    <div class="naming-group">
+                        <label for="custom-perfume-name">Name Your Creation</label>
+                        <input type="text" id="custom-perfume-name" placeholder="E.g., Amber Whispers, Velvet Rain" maxlength="24">
+                    </div>
+                    
+                    <div class="lab-actions">
+                        <button class="style-button primary" id="add-custom-to-cart">Add Custom Blend - $150.00</button>
+                        <button class="style-button gold" id="share-custom-blend" title="Share custom perfume blend config">
+                            <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle; margin-right: 4px;">share</span> Share Blend
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- PRODUCTS SECTION --- -->
+        <section class="container-4 reveal" id="products">
+            <div class="section-subtitle">Curated Collection</div>
+            <h2 class="section-title">Our Signature Perfumes</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 20px; font-weight: 300;">Elevate your senses. Select a category below to explore our hand-crafted collection of premium fragrances.</p>
+            
+            <!-- Category Filter Menu -->
+            <div>
+                <ul class="filter-menu">
+                    <li><a href="#" class="product-filter-btn active" data-category="all">All</a></li>
+                    <li><a href="#" class="product-filter-btn" data-category="floral">Floral</a></li>
+                    <li><a href="#" class="product-filter-btn" data-category="woody">Woody</a></li>
+                    <li><a href="#" class="product-filter-btn" data-category="fruity">Fruity</a></li>
+                    <li><a href="#" class="product-filter-btn" data-category="fresh">Fresh</a></li>
+                </ul>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="container-4-content-2">
+                <!-- Product 1: Aura de Rose -->
+                <div class="product-card" data-category="floral">
+                    <span class="product-badge">Best Seller</span>
+                    <label class="compare-checkbox-label" title="Compare this perfume">
+                        <input type="checkbox" class="compare-checkbox" data-id="aura-rose">
+                        <span class="compare-custom-box"></span>
+                        <span class="compare-label-text">Compare</span>
+                    </label>
+                    <div class="product-img-container">
+                        <img src="images/img2.jpg" alt="Aura de Rose Perfume Bottle">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-id="aura-rose">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Floral</span>
+                        <h3 class="product-title">Aura de Rose</h3>
+                        <div class="product-rating">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <span class="product-price">$125.00</span>
+                        <button class="add-to-cart-btn" data-id="aura-rose">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Santal Oud -->
+                <div class="product-card" data-category="woody">
+                    <span class="product-badge">Trending</span>
+                    <label class="compare-checkbox-label" title="Compare this perfume">
+                        <input type="checkbox" class="compare-checkbox" data-id="santal-oud">
+                        <span class="compare-custom-box"></span>
+                        <span class="compare-label-text">Compare</span>
+                    </label>
+                    <div class="product-img-container">
+                        <img src="images/img7.jpg" alt="Santal Oud Perfume Bottle">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-id="santal-oud">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Woody</span>
+                        <h3 class="product-title">Santal Oud</h3>
+                        <div class="product-rating">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star_half</span>
+                        </div>
+                        <span class="product-price">$140.00</span>
+                        <button class="add-to-cart-btn" data-id="santal-oud">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Jardin Fruité -->
+                <div class="product-card" data-category="fruity">
+                    <label class="compare-checkbox-label" title="Compare this perfume">
+                        <input type="checkbox" class="compare-checkbox" data-id="jardin-fruite">
+                        <span class="compare-custom-box"></span>
+                        <span class="compare-label-text">Compare</span>
+                    </label>
+                    <div class="product-img-container">
+                        <img src="images/img4.jpg" alt="Jardin Fruité Perfume Bottle">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-id="jardin-fruite">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Fruity</span>
+                        <h3 class="product-title">Jardin Fruité</h3>
+                        <div class="product-rating">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <span class="product-price">$115.00</span>
+                        <button class="add-to-cart-btn" data-id="jardin-fruite">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Céleste -->
+                <div class="product-card" data-category="fresh">
+                    <label class="compare-checkbox-label" title="Compare this perfume">
+                        <input type="checkbox" class="compare-checkbox" data-id="celeste">
+                        <span class="compare-custom-box"></span>
+                        <span class="compare-label-text">Compare</span>
+                    </label>
+                    <div class="product-img-container">
+                        <img src="images/img6.jpg" alt="Céleste Perfume Bottle">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-id="celeste">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Fresh</span>
+                        <h3 class="product-title">Céleste</h3>
+                        <div class="product-rating">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star_half</span>
+                        </div>
+                        <span class="product-price">$130.00</span>
+                        <button class="add-to-cart-btn" data-id="celeste">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Noir Charm -->
+                <div class="product-card" data-category="woody">
+                    <span class="product-badge">Exclusive</span>
+                    <label class="compare-checkbox-label" title="Compare this perfume">
+                        <input type="checkbox" class="compare-checkbox" data-id="noir-charm">
+                        <span class="compare-custom-box"></span>
+                        <span class="compare-label-text">Compare</span>
+                    </label>
+                    <div class="product-img-container">
+                        <img src="images/img3.jpg" alt="Noir Charm Perfume Bottle">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-id="noir-charm">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Woody</span>
+                        <h3 class="product-title">Noir Charm</h3>
+                        <div class="product-rating">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <span class="product-price">$145.00</span>
+                        <button class="add-to-cart-btn" data-id="noir-charm">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Pamplemousse -->
+                <div class="product-card" data-category="fresh">
+                    <label class="compare-checkbox-label" title="Compare this perfume">
+                        <input type="checkbox" class="compare-checkbox" data-id="pamplemousse">
+                        <span class="compare-custom-box"></span>
+                        <span class="compare-label-text">Compare</span>
+                    </label>
+                    <div class="product-img-container">
+                        <img src="images/img5.jpg" alt="Pamplemousse Perfume Bottle">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-id="pamplemousse">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Fresh</span>
+                        <h3 class="product-title">Pamplemousse</h3>
+                        <div class="product-rating">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star_half</span>
+                        </div>
+                        <span class="product-price">$110.00</span>
+                        <button class="add-to-cart-btn" data-id="pamplemousse">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 7: Velvet Petals -->
+                <div class="product-card" data-category="floral">
+                    <label class="compare-checkbox-label" title="Compare this perfume">
+                        <input type="checkbox" class="compare-checkbox" data-id="velvet-petals">
+                        <span class="compare-custom-box"></span>
+                        <span class="compare-label-text">Compare</span>
+                    </label>
+                    <div class="product-img-container">
+                        <img src="images/img8.jpg" alt="Velvet Petals Perfume Bottle">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-id="velvet-petals">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Floral</span>
+                        <h3 class="product-title">Velvet Petals</h3>
+                        <div class="product-rating">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <span class="product-price">$135.00</span>
+                        <button class="add-to-cart-btn" data-id="velvet-petals">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- TESTIMONIALS SECTION (NEW) --- -->
+        <section class="testimonials-section reveal">
+            <div class="section-subtitle">Our Customers</div>
+            <h2 class="section-title">Sensory Journeys</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">“</div>
+                    <div class="testimonial-rating">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="testimonial-text">"Aura de Rose has become my definitive scent. It lasts beautifully all day, changing from a crisp floral to a deep musk. I receive compliments daily!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">EA</div>
+                        <div class="testimonial-author-info">
+                            <h4>Eleanor Vance</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">“</div>
+                    <div class="testimonial-rating">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="testimonial-text">"The Scent Matchmaker quiz recommended Santal Oud, and it fits me perfectly. It feels mysterious and expensive. The refill service makes it incredibly easy."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JD</div>
+                        <div class="testimonial-author-info">
+                            <h4>Julian Drake</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">“</div>
+                    <div class="testimonial-rating">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="testimonial-text">"I ordered a customized Gifting Box for my sister's wedding. The packaging was stunning, and the fragrance notes of Céleste were absolutely fresh."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MH</div>
+                        <div class="testimonial-author-info">
+                            <h4>Maya Holmes</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- NEWSLETTER SECTION (NEW) --- -->
+        <section class="newsletter-section reveal">
+            <div class="newsletter-wrap">
+                <h2>Join the Circle</h2>
+                <p>Subscribe to our exclusive sensory logs to receive advanced release alerts, private discount offers, and custom fragrance styling tips.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" aria-label="Your Email Address" required>
+                    <button type="submit" class="style-button primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- --- FOOTER --- -->
+    <footer id="footer" class="reveal">
+        <div class="footer-col-1">
+            <h1>akira</h1>
+            <p>We believe that perfumes invoke emotions, bring back moments, and declare presence. Express your unique story through our carefully crafted pure scents.</p>
+            <p class="footer-copyright">&copy; 2026 Akira Perfumes - All rights Reserved</p>
+        </div>
+        <div class="footer-col-2">
+            <h3>Opening Times</h3>
+            <p>Monday - Friday: 10:00 - 23:00</p>
+            <p>Saturday: 10:00 - 19:00</p>
+            <p>Sunday: Closed</p>
+            
+            <div id="footer-logos">
+                <a class="social-link" title="Visit Facebook" aria-label="Visit Facebook">
+                    <img src="logos/facebook.png" alt="Facebook icon">
+                </a>
+                <a class="social-link" title="Visit Instagram" aria-label="Visit Instagram">
+                    <img src="logos/instagram.png" alt="Instagram icon">
+                </a>
+                <a class="social-link" title="Visit Twitter" aria-label="Visit Twitter">
+                    <img src="logos/twitter.png" alt="Twitter icon">
+                </a>
+                <a class="social-link" title="Visit Pinterest" aria-label="Visit Pinterest">
+                    <img src="logos/pinterest.png" alt="Pinterest icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-col-3">
+            <h3>Contact Us</h3>
+            <p><span class="material-symbols-outlined">call</span> Tel: (+91) 345 678 910</p>
+            <p><span class="material-symbols-outlined">mail</span> Email: info@akira.com</p>
+            <p><span class="material-symbols-outlined">location_on</span> Address: Madhuram Complex, Valsad, Gujarat, India</p>
+        </div>
+    </footer>
+
+    <!-- --- DRAWER / OVERLAY COMPONENT WRAPPERS --- -->
+    
+    <!-- Drawer overlays -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="qv-overlay" id="qv-overlay"></div>
+
+    <!-- Slide-out Shopping Cart Drawer -->
+    <div class="cart-drawer-container" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Drawer</h3>
+            <button class="drawer-close-btn" id="close-cart" title="Close Drawer" aria-label="Close Drawer">
+                <span class="material-symbols-outlined" style="font-size: 28px;">close</span>
+            </button>
+        </div>
+        
+        <!-- Cart Items list container -->
+        <div id="cart-items">
+            <!-- Dynamic elements generated in script.js -->
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-row">
+                <span>Subtotal</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button class="style-button primary checkout-btn" id="checkout-btn">Checkout Order</button>
+        </div>
+    </div>
+
+    <!-- Quick View Details Modal Popup -->
+    <div class="quickview-modal-container" id="quickview-modal">
+        <div class="qv-image-side">
+            <img src="" alt="Selected Perfume Image" id="qv-img">
+        </div>
+        <div class="qv-content-side">
+            <div class="qv-header">
+                <h3 class="qv-title" id="qv-title">Product Scent</h3>
+                <button class="qv-close-btn" id="close-quickview" title="Close Modal" aria-label="Close Modal">
+                    <span class="material-symbols-outlined" style="font-size: 28px;">close</span>
+                </button>
+            </div>
+            <span class="qv-price" id="qv-price">$0.00</span>
+            
+            <div class="qv-divider"></div>
+            
+            <p class="qv-desc" id="qv-desc">Product description will be rendered here dynamically.</p>
+            
+            <!-- Fragrance Notes Block -->
+            <div class="qv-meta-block">
+                <h4 class="qv-meta-title">Fragrance Profile</h4>
+                <div class="qv-notes-grid">
+                    <div class="qv-note-item">
+                        <strong>Top Note</strong>
+                        <span id="qv-notes-top">Turkish Rose</span>
+                    </div>
+                    <div class="qv-note-item">
+                        <strong>Heart Note</strong>
+                        <span id="qv-notes-middle">Peony</span>
+                    </div>
+                    <div class="qv-note-item">
+                        <strong>Base Note</strong>
+                        <span id="qv-notes-base">White Musk</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Size Options selector -->
+            <div class="qv-meta-block">
+                <h4 class="qv-meta-title">Bottle Size</h4>
+                <div class="qv-sizes">
+                    <button class="size-btn active" data-size="100ml">100ml / 3.4 FL.OZ</button>
+                    <button class="size-btn" data-size="50ml">50ml / 1.7 FL.OZ</button>
+                </div>
+            </div>
+
+            <div class="qv-divider"></div>
+
+            <div class="qv-actions">
+                <button class="style-button primary" id="modal-add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Comparison Sticky Bottom Drawer -->
+    <div class="compare-drawer" id="compare-drawer">
+        <div class="compare-drawer-content">
+            <div class="compare-selected-info">
+                <span class="compare-count" id="compare-count">0</span> products selected
+            </div>
+            <div class="compare-selected-thumbs" id="compare-selected-thumbs">
+                <!-- Thumbs added dynamically -->
+            </div>
+            <div class="compare-drawer-actions">
+                <button class="style-button gold" id="compare-clear-btn">Clear All</button>
+                <button class="style-button primary" id="compare-now-btn">Compare Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Comparison Modal overlay -->
+    <div class="compare-overlay" id="compare-overlay"></div>
+    <div class="compare-modal-container" id="compare-modal">
+        <div class="compare-modal-header">
+            <h3>Fragrance Comparison</h3>
+            <button class="compare-modal-close" id="close-compare-modal" title="Close Comparison Modal" aria-label="Close Comparison Modal">
+                <span class="material-symbols-outlined" style="font-size: 28px;">close</span>
+            </button>
+        </div>
+        <div class="compare-modal-body" id="compare-modal-body">
+            <!-- Dynamic comparison table rendered here -->
+        </div>
+    </div>
+
+    <!-- Scent Concierge Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <!-- Chat Bubble Button -->
+        <button class="chatbot-bubble-btn" id="chatbot-bubble-btn" title="Open Scent Concierge" aria-label="Open Scent Concierge">
+            <span class="material-symbols-outlined">chat_bubble</span>
+            <span class="chatbot-bubble-badge" style="display:none;">1</span>
+        </button>
+        
+        <!-- Chat Window -->
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-window-header">
+                <div class="chatbot-concierge-profile">
+                    <div class="concierge-avatar">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </div>
+                    <div class="concierge-info">
+                        <h4>Akira Concierge</h4>
+                        <span class="concierge-status">Online Scent Expert</span>
+                    </div>
+                </div>
+                <button class="chatbot-close-btn" id="close-chatbot" title="Close Concierge Chat" aria-label="Close Concierge Chat">
+                    <span class="material-symbols-outlined" style="font-size: 22px;">close</span>
+                </button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbot-messages">
+                <!-- Initial messages populated in script.js -->
+            </div>
+            
+            <!-- Quick Options / Prompts -->
+            <div class="chatbot-options-container" id="chatbot-options-container">
+                <!-- Option buttons populated dynamically -->
+            </div>
+            
+            <div class="chatbot-input-container">
+                <input type="text" id="chatbot-input" placeholder="Ask anything (e.g. recommend woody)..." aria-label="Chatbot Input">
+                <button id="chatbot-send-btn" title="Send message" aria-label="Send message">
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Execution Engine -->
+    <script src="script.js"></script>
+</body>
+
+</html>
